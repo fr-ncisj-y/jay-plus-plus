@@ -5,7 +5,8 @@ import ThemeToggle from './components/theme_toggle/ThemeToggle';
 import Home from './pages/home/Home';
 import Projects from './pages/projects/Projects';
 import Contact from './pages/contact/Contact';
-import { FaHome, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
+import Certificates from "./pages/certificates/Certificates";
+import {FaHome, FaProjectDiagram, FaEnvelope, FaCertificate} from 'react-icons/fa';
 import Background from "./components/Background"; // new component
 
 function App() {
@@ -13,30 +14,39 @@ function App() {
     const [activeSection, setActiveSection] = useState('home');
 
     useEffect(() => {
+        // Load from localStorage on first mount
         const savedTheme = localStorage.getItem('theme') || 'dark';
         setTheme(savedTheme);
-        document.body.className = savedTheme;
     }, []);
 
     useEffect(() => {
+        // Apply theme class to body on every theme change
         document.body.className = theme;
         localStorage.setItem('theme', theme);
     }, [theme]);
 
+
     useEffect(() => {
         const sections = document.querySelectorAll('section');
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                    }
-                });
-            },
-            { threshold: 0.5 }
-        );
-        sections.forEach((section) => observer.observe(section));
-        return () => sections.forEach((section) => observer.unobserve(section));
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 1, // 50% of section must be visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveSection(entry.target.id);
+                }
+            });
+        }, options);
+
+        sections.forEach(section => observer.observe(section));
+
+        return () => {
+            sections.forEach(section => observer.unobserve(section));
+        };
     }, []);
 
     return (
@@ -70,6 +80,16 @@ function App() {
                     </li>
                     <li>
                         <a
+                            href="#certificates"
+                            aria-label="Certificates"
+                            className={activeSection === 'certificates' ? 'active' : ''}
+                        >
+                            <FaCertificate size={24} />
+                            <span className="label">Certificates</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a
                             href="#contact"
                             aria-label="Contact"
                             className={activeSection === 'contact' ? 'active' : ''}
@@ -84,6 +104,7 @@ function App() {
             <div className="app">
                 <Home />
                 <Projects />
+                <Certificates />
                 <Contact />
             </div>
         </>

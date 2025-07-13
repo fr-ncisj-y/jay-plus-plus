@@ -95,7 +95,7 @@ body.light .sidebar a:hover {
         border-radius: 30px;
         flex-direction: row;
         justify-content: space-around;
-        background: rgba(17, 17, 17, 0.6);
+        /*background: rgba(17, 17, 17, 0.6);*/
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);

@@ -6,7 +6,7 @@ import Home from './pages/home/Home';
 import Projects from './pages/projects/Projects';
 import Contact from './pages/contact/Contact';
 import { FaHome, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
-import Background from "./components/Background";
+import Background from "./components/Background"; // new component
 
 function App() {
     const [theme, setTheme] = useState('dark');
@@ -39,14 +39,13 @@ function App() {
         return () => sections.forEach((section) => observer.unobserve(section));
     }, []);
 
-
-
-
-
     return (
         <>
-            <Background/>
+            <Background theme={theme} />
+            {/* renders animated background */}
+
             <ThemeToggle theme={theme} setTheme={setTheme} />
+
             <nav className="sidebar">
                 <ul>
                     <li>
@@ -81,6 +80,7 @@ function App() {
                     </li>
                 </ul>
             </nav>
+
             <div className="app">
                 <Home />
                 <Projects />

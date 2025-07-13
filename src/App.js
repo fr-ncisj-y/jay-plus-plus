@@ -1,7 +1,7 @@
 import './App.css';
 import './components/sidebar/Sidebar.css';
 import { useEffect, useState } from 'react';
-import ThemeToggle from './components/them_toggle/ThemeToggle';
+import ThemeToggle from './components/theme_toggle/ThemeToggle';
 import Home from './pages/home/Home';
 import Projects from './pages/projects/Projects';
 import Contact from './pages/contact/Contact';

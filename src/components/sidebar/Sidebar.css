@@ -82,9 +82,6 @@ body.light .sidebar a:hover {
     color: #000;
 }
 
-body.light .sidebar a .label {
-    background: rgba(0, 0, 0, 0.8);
-}
 
 /* Mobile */
 @media (max-width: 600px) {
@@ -168,7 +165,7 @@ body.light .sidebar a .label {
 
     body.light .sidebar a {
         background: none !important;
-        color: inherit;
+        color: black;
     }
 
     body.light .sidebar a:hover,

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/jay-plus-plus/static/css/main.41d3f036.css",
+    "main.js": "/jay-plus-plus/static/js/main.40acdc0b.js",
+    "index.html": "/jay-plus-plus/index.html",
+    "main.41d3f036.css.map": "/jay-plus-plus/static/css/main.41d3f036.css.map",
+    "main.40acdc0b.js.map": "/jay-plus-plus/static/js/main.40acdc0b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41d3f036.css",
+    "static/js/main.40acdc0b.js"
+  ]
+}

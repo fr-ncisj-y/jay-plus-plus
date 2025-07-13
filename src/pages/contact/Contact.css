@@ -15,10 +15,9 @@
 }
 
 .section p {
-    max-width: 600px;
+
     font-size: 1rem;
     line-height: 1.6;
-    margin: 0 auto 1.5rem;
 }
 
 .social-links {

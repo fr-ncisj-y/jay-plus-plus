@@ -6,6 +6,7 @@ import Home from './pages/home/Home';
 import Projects from './pages/projects/Projects';
 import Contact from './pages/contact/Contact';
 import { FaHome, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
+import Background from "./components/Background";
 
 function App() {
     const [theme, setTheme] = useState('dark');
@@ -44,6 +45,7 @@ function App() {
 
     return (
         <>
+            <Background/>
             <ThemeToggle theme={theme} setTheme={setTheme} />
             <nav className="sidebar">
                 <ul>

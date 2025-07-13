@@ -90,7 +90,7 @@ body.light .sidebar a:hover {
         bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
-        width: 90vw;
+        width: 80vw;
         padding: 0.5rem 1rem;
         border-radius: 30px;
         flex-direction: row;

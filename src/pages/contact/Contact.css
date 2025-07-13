@@ -18,5 +18,38 @@
     max-width: 600px;
     font-size: 1rem;
     line-height: 1.6;
-    margin: 0 auto;
+    margin: 0 auto 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* Hover styles per platform */
+.social-links a.email:hover {
+    color: #c71610; /* Gmail Red */
+}
+
+.social-links a.facebook:hover {
+    color: #1877F2;
+}
+
+.social-links a.linkedin:hover {
+    color: #0077B5;
+}
+
+.social-links a.github:hover {
+    color: #333; /* GitHub Black */
+}
+
+.social-links a.reddit:hover {
+    color: #FF4500;
 }

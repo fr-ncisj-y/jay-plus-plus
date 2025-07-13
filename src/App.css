@@ -5,6 +5,8 @@ html, body, #root {
     width: 100%;
     font-family: 'Segoe UI', sans-serif;
     transition: background-color 0.4s ease, background-image 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
+
 }
 
 html {
@@ -39,3 +41,21 @@ body.light {
     display: block;
     width: 100%;
 }
+
+#tsparticles {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+.sidebar,
+.app {
+    position: relative;
+    z-index: 1;
+}
+

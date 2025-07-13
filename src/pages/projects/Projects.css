@@ -1,3 +1,4 @@
+/* Main section layout */
 .section {
     min-height: 100vh;
     display: flex;
@@ -19,4 +20,73 @@
     font-size: 1rem;
     line-height: 1.6;
     margin: 0 auto;
+}
+
+/* Project layout */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Shared project card styles */
+.project-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Light theme styles */
+body.light .project-card {
+    background: #f9f9f9;
+    color: #222;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.light .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+body.light .project-card p {
+    color: #444;
+}
+
+/* Dark theme styles */
+body.dark .project-card {
+    background: #1e1e1e;
+    color: #eee;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.08);
+}
+
+body.dark .project-card p {
+    color: #ccc;
+}
+
+/* Tech stack pill list */
+.tech-stack {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tech-stack li {
+    background-color: #e7bb1a;
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
 }

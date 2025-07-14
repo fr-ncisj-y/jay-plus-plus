@@ -37,6 +37,7 @@
     border-radius: 50%;
     background-color: gray;
     transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
 }
 
 .sidebar a:hover {
@@ -51,9 +52,8 @@
 
 .sidebar a .label {
     position: absolute;
-    left: 60px;
     top: 50%;
-    transform: translateY(-50%) translateX(-10px);
+    transform: translateY(-50%) translateX(10px); /* small gap to the right */
     white-space: nowrap;
     padding: 0.3rem 0.6rem;
     background: rgba(0, 0, 0, 0.75);
@@ -63,6 +63,7 @@
     opacity: 0;
     pointer-events: none;
     transition: all 0.2s ease;
+    left: calc(100% + 8px);
 }
 
 .sidebar a:hover .label,

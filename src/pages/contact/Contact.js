@@ -1,8 +1,9 @@
 import './Contact.css';
 import { FaFacebookF, FaLinkedinIn, FaGithub, FaRedditAlien, FaEnvelope } from 'react-icons/fa';
+import Section from "../../components/Section";
 
 const Contact = () => (
-    <section className="section" id="contact">
+    <Section id="reach-out-to-me">
         <h2>Contact</h2>
         <p>Got an idea or project in mind? I'm always open to new opportunities and collaborations. Feel free to reach out via email or connect with me on social media.</p>
         <div className="social-links">
@@ -22,7 +23,7 @@ const Contact = () => (
                 <FaRedditAlien />
             </a>
         </div>
-    </section>
+    </Section>
 );
 
 export default Contact;

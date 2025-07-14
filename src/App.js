@@ -1,17 +1,24 @@
-import './App.css';
-import './components/sidebar/Sidebar.css';
 import { useEffect, useState } from 'react';
-import ThemeToggle from './components/theme_toggle/ThemeToggle';
-import Home from './pages/home/Home';
-import Projects from './pages/projects/Projects';
-import Contact from './pages/contact/Contact';
+import Contact from "./pages/contact/Contact";
 import Certificates from "./pages/certificates/Certificates";
-import {FaHome, FaProjectDiagram, FaEnvelope, FaCertificate} from 'react-icons/fa';
-import Background from "./components/Background"; // new component
+import Projects from "./pages/projects/Projects";
+import Home from "./pages/home/Home";
+
+import ThemeToggle from "./components/theme_toggle/ThemeToggle";
+import Sidebar from "./components/sidebar/Sidebar";
+import Background from "./components/Background";
+import './App.css';
+
+const sections = [
+    { id: 'about-francis-jay', label: 'Home', color: 'red' },
+    { id: 'projects-francis-jay-is-involved-in', label: 'Projects', color: 'green' },
+    { id: 'technical-skills-certifications', label: 'Certificates', color: 'blue' },
+    { id: 'reach-out-to-me', label: 'Contact', color: 'orange' },
+];
 
 function App() {
     const [theme, setTheme] = useState('dark');
-    const [activeSection, setActiveSection] = useState('home');
+    const [activeSection, setActiveSection] = useState('about-francis-jay');
 
     useEffect(() => {
         // Load from localStorage on first mount
@@ -27,86 +34,57 @@ function App() {
 
 
     useEffect(() => {
-        const sections = document.querySelectorAll('section');
-        const options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 1, // 50% of section must be visible
-        };
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            console.log('Scroll Y:', scrollY);
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setActiveSection(entry.target.id);
+            let current = '';
+            let minOffset = Infinity;
+
+            sections.forEach(({ id }) => {
+                const el = document.getElementById(id);
+                if (el) {
+                    const rect = el.getBoundingClientRect();
+                    console.log(`Section ${id}: top=${rect.top}, bottom=${rect.bottom}`);
+
+                    const offset = Math.abs(rect.top);
+                    if (offset < minOffset) {
+                        minOffset = offset;
+                        current = id;
+                    }
                 }
             });
-        }, options);
 
-        sections.forEach(section => observer.observe(section));
-
-        return () => {
-            sections.forEach(section => observer.unobserve(section));
+            if (current && current !== activeSection) {
+                console.log('✅ Active section set to:', current);
+                setActiveSection(current);
+            }
         };
-    }, []);
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll(); // run once on load
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [activeSection]);
 
     return (
         <>
+
             <Background theme={theme} />
-            {/* renders animated background */}
 
             <ThemeToggle theme={theme} setTheme={setTheme} />
 
-            <nav className="sidebar">
-                <ul>
-                    <li>
-                        <a
-                            href="#home"
-                            aria-label="Home"
-                            className={activeSection === 'home' ? 'active' : ''}
-                        >
-                            <FaHome size={24} />
-                            <span className="label">Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#projects"
-                            aria-label="Projects"
-                            className={activeSection === 'projects' ? 'active' : ''}
-                        >
-                            <FaProjectDiagram size={24} />
-                            <span className="label">Projects</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#certificates"
-                            aria-label="Certificates"
-                            className={activeSection === 'certificates' ? 'active' : ''}
-                        >
-                            <FaCertificate size={24} />
-                            <span className="label">Certificates</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#contact"
-                            aria-label="Contact"
-                            className={activeSection === 'contact' ? 'active' : ''}
-                        >
-                            <FaEnvelope size={24} />
-                            <span className="label">Contact</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <Sidebar activeSection={activeSection} />
 
+            {/* Page Sections */}
             <div className="app">
                 <Home />
                 <Projects />
                 <Certificates />
                 <Contact />
             </div>
+
+
         </>
     );
 }

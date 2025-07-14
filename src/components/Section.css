@@ -1,0 +1,15 @@
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--heading-color, #facc15);
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 1.5rem 1rem;
+    }
+
+    .section h2 {
+        font-size: 1.75rem;
+    }
+}

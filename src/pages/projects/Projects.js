@@ -25,6 +25,7 @@ import {
     SiTestinglibrary,
 } from 'react-icons/si';
 import { useState } from 'react';
+import Section from "../../components/Section";
 
 
 
@@ -46,10 +47,10 @@ const Projects = () => {
     const [showDetails3, setShowDetails3] = useState(false);
 
     return (
-        <section className="section" id="projects">
+        <Section id="projects-francis-jay-is-involved-in">
             <div className="scrollable-content" >
             <h2>Projects</h2>
-            <p>Here are some of my favorite projects showcasing frontend and backend skills.</p>
+            <p>A handpicked collection of real-world projects that blend startup agility with enterprise grade solutions. From seamless user interfaces to scalable backend architectures, each reflects my focus on building secure, efficient, and impactful software for modern businesses.</p>
 
             <div className="project-list">
                 {/* Card 1 */}
@@ -224,7 +225,7 @@ const Projects = () => {
 
             </div>
             </div>
-        </section>
+        </Section>
     );
 };
 

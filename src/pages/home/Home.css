@@ -1,33 +1,21 @@
-.hero {
-    min-height: 100vh;
+.container-home {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-    box-sizing: border-box;
+    align-items: flex-start; /* Align items to the left */
+    text-align: left;        /* Align text to the left */
+    gap: 0.5rem;             /* Optional: spacing between elements */
 }
 
-.hero h1 {
-    font-size: 2.5rem;
+.name-placeholder{
+    font-size: 3rem;
+}
+
+.position-placeholder{
+    font-size: 2rem;
+    color: #898585;
     margin-bottom: 0.5rem;
 }
-
-.hero h2 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 1.5rem;
-    color: #aaa;
-}
-
-.hero p {
-    max-width: 600px;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0 auto;
-}
-
-body.light .hero h2 {
-    color: #555;
+.highlight{
+    font-weight:  bold;
+    color: #f4c430;
 }

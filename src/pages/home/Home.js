@@ -1,11 +1,16 @@
+// src/pages/home/Home.js
 import './Home.css';
+import Section from "../../components/Section";
 
 const Home = () => (
-    <section className="hero" id="home">
-        <h1>Hi, I'm FRANCIS JAY</h1>
-        <h2>Software Engineer</h2>
-        <p>I build scalable, user-focused web applications—from intuitive UIs to powerful backend systems.</p>
-    </section>
+    <Section id="about-francis-jay">
+        <div className="container-home">
+        <span className={"hi"}>Hello,</span>
+        <span className={"name-placeholder"}>I'm <span className={"highlight"}> FRANCIS JAY </span></span>
+        <span className={"position-placeholder"}>Software Engineer</span>
+        <p>Certified in Java, JavaScript, REST APIs, and more, I deliver impactful software solutions including enterprise platforms, secure mobile apps, and automation tools, demonstrating both technical depth and real-world results.</p>
+        </div>
+        </Section>
 );
 
 export default Home;

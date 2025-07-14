@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/jay-plus-plus/static/css/main.e2c58a25.css",
-    "main.js": "/jay-plus-plus/static/js/main.72d2c250.js",
+    "main.css": "/jay-plus-plus/static/css/main.8c509311.css",
+    "main.js": "/jay-plus-plus/static/js/main.944dae00.js",
     "static/media/simpli-learn-javascript.png": "/jay-plus-plus/static/media/simpli-learn-javascript.6042723cda6f59c0664a.png",
     "static/media/codecademy-learn-swift.png": "/jay-plus-plus/static/media/codecademy-learn-swift.51d7e500089dbff2840d.png",
     "static/media/codecademy-learn-java.png": "/jay-plus-plus/static/media/codecademy-learn-java.38bf65423ab03b581b6c.png",
@@ -11,11 +11,11 @@
     "static/media/hacker-rank-java-basic.png": "/jay-plus-plus/static/media/hacker-rank-java-basic.49ba2d1935def5c786ce.png",
     "static/media/linkein-learning-search-engine-optimization-by-moz.jpeg": "/jay-plus-plus/static/media/linkein-learning-search-engine-optimization-by-moz.618c375554656b2c220c.jpeg",
     "index.html": "/jay-plus-plus/index.html",
-    "main.e2c58a25.css.map": "/jay-plus-plus/static/css/main.e2c58a25.css.map",
-    "main.72d2c250.js.map": "/jay-plus-plus/static/js/main.72d2c250.js.map"
+    "main.8c509311.css.map": "/jay-plus-plus/static/css/main.8c509311.css.map",
+    "main.944dae00.js.map": "/jay-plus-plus/static/js/main.944dae00.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2c58a25.css",
-    "static/js/main.72d2c250.js"
+    "static/css/main.8c509311.css",
+    "static/js/main.944dae00.js"
   ]
 }

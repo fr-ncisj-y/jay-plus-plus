@@ -88,7 +88,7 @@ const certificates = [
 const Certificates = () => (
     <Section id="technical-skills-certifications">
         <h2>Certifications</h2>
-        <p>Verified credentials showcasing my proficiency in critical technologies and modern development stacks—backing real-world experience with recognized expertise.</p>
+        <p>Verified credentials showcasing my proficiency in critical technologies and modern development stacks backing real world experience with recognized expertise.</p>
         <div className="certification-list">
             {certificates.map((cert, idx) => (
                 <div className="certification-card" key={idx}>

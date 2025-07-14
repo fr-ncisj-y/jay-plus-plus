@@ -50,7 +50,7 @@ const Projects = () => {
         <Section id="projects-francis-jay-is-involved-in">
             <div className="scrollable-content" >
             <h2>Projects</h2>
-            <p>A handpicked collection of real-world projects that blend startup agility with enterprise grade solutions. From seamless user interfaces to scalable backend architectures, each reflects my focus on building secure, efficient, and impactful software for modern businesses.</p>
+            <p>A handpicked collection of real world projects that blend startup agility with enterprise grade solutions. From seamless user interfaces to scalable backend architectures, each reflects my focus on building secure, efficient, and impactful software for modern businesses.</p>
 
             <div className="project-list">
                 {/* Card 1 */}
@@ -74,9 +74,9 @@ const Projects = () => {
                         <div className="project-details">
                             <p>
                                 At Kryterion, I helped engineer a secure, scalable platform used to deliver
-                                computer-based assessments globally. My work involved building backend features from
+                                computer based assessments globally. My work involved building backend features from
                                 Jira stories, diagnosing and resolving production issues, and improving platform
-                                responsiveness through mobile-first design. I also led frontend modernization efforts
+                                responsiveness through mobile first design. I also led frontend modernization efforts
                                 by migrating legacy Struts components to VueJS, improving both maintainability and user
                                 experience. On the backend, I introduced centralized exception handling using Java’s
                                 @ControllerAdvice, streamlining debugging across services. <span className="project-details-toggle" onClick={() => setShowDetails1(false)}>
@@ -103,8 +103,8 @@ const Projects = () => {
                         In addition to my work on the main assessment platform, I also contributed to the development
                         of its companion mobile application, built with React Native for both Android and iOS. This app
                         was designed to offer a consistent, secure exam experience on mobile devices. I played a key
-                        role in integrating two-way communication between the mobile app and the web frontend, ensuring
-                        real-time sync and seamless user interaction during exams. {!showDetails2 && (
+                        role in integrating two way communication between the mobile app and the web frontend, ensuring
+                        real time sync and seamless user interaction during exams. {!showDetails2 && (
                         <span className="project-details-toggle" onClick={() => setShowDetails2(true)}>
                                 Show More ▼
                             </span>
@@ -117,8 +117,8 @@ const Projects = () => {
                                 To meet strict proctoring requirements, I implemented security features such as screen
                                 pinning on Android and Guided Access on iOS, effectively locking users into the app
                                 during exam sessions. I collaborated closely with QA and UX teams to validate performance
-                                and accessibility across a wide range of devices. This involved extensive real-device
-                                testing and emulator debugging, resolving platform-specific compatibility issues and
+                                and accessibility across a wide range of devices. This involved extensive real device
+                                testing and emulator debugging, resolving platform specific compatibility issues and
                                 helping ensure smooth, secure operation across both mobile ecosystems.<span className="project-details-toggle" onClick={() => setShowDetails2(false)}>
                                     Show Less ▲
                                 </span>
@@ -143,7 +143,7 @@ const Projects = () => {
                     <h3>Cardless ATM Transaction Platform</h3>
                     <span className={"company"}>MDI Novare</span>
                     <p>
-                        I played a key role in developing a large-scale banking platform focused on improving the
+                        I played a key role in developing a large scale banking platform focused on improving the
                         customer journey by enabling cardless ATM transactions, bills payment, and secure digital
                         services. My work directly contributed to improved transaction speed, reliability, and user
                         satisfaction.{!showDetails3 && (
@@ -157,7 +157,7 @@ const Projects = () => {
                         <div className="project-details">
                             <p>
                                 As a result of this initiative, I was promoted to Senior Software Engineer, recognizing
-                                my leadership in driving the adoption of cardless technologies. I led full-cycle feature
+                                my leadership in driving the adoption of cardless technologies. I led full cycle feature
                                 delivery, conducted root cause analysis, and implemented JUnit testing for stability.
                                 I enforced code quality with SonarLint and PMD, and deployed containerized microservices
                                 to Kubernetes clusters. I also integrated C# DLLs with REST APIs hosted on IIS and
@@ -185,7 +185,7 @@ const Projects = () => {
                     <h3>Administrative Task Tracking System</h3>
                     <span className={"company"}>Bicol Medical Center</span>
                     <p>
-                        As an Administrative Aide, I built an Excel-based tracking system using VBA to automate document
+                        As an Administrative Aide, I built an Excel based tracking system using VBA to automate document
                         routing, deadline alerts, and audit logs. This reduced manual errors and improved processing
                         speed. I also supported daily operations, ensuring smooth document flow and helping departments
                         meet tight internal deadlines through strong organization and communication.</p>
@@ -204,7 +204,7 @@ const Projects = () => {
                     <span className={"company"}>Southstar Drug</span>
                     <p>
                         Developed a batch script to automate routine troubleshooting tasks for POS systems, including
-                        verifying inter-terminal connectivity, checking network health, and executing daily system and
+                        verifying inter terminal connectivity, checking network health, and executing daily system and
                         database updates. This automation reduced manual checks and improved operational uptime. In
                         addition to scripting, I managed workstation maintenance and conducted regular network
                         diagnostics to ensure secure, stable, and efficient POS operations across the business.Managed

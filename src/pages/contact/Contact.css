@@ -52,3 +52,97 @@
 .social-links a.reddit:hover {
     color: #FF4500;
 }
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    width: 50vw; /* 👈 Wider layout */
+    max-width: 700px;
+    margin-inline: auto;
+    backdrop-filter: blur(8px);
+    padding: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--border-color, #ccc);
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: inherit;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-bottom-color: #ffd700; /* gold highlight on focus */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button {
+    align-self: flex-start;
+
+    color: #000;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* Form styling already exists... only add this: */
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.button-group button {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Send button (gold) */
+.send-btn {
+    background-color: #ffd700;
+    color: #000;
+    border: none;
+}
+
+.send-btn:hover {
+    background-color: #e5c100;
+}
+
+/* Clear button (subtle gray) */
+.clear-btn {
+    background-color: #ccc;
+    color: var(--text-color, #555);
+    border: 2px solid #ccc;
+}
+
+.clear-btn:hover {
+    border-color: #aaa;
+    color: #000;
+    background-color: #42b883;
+}
+

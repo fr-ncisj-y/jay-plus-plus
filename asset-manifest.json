@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/jay-plus-plus/static/css/main.75d8caae.css",
+    "main.css": "/jay-plus-plus/static/css/main.40dbe57b.css",
     "main.js": "/jay-plus-plus/static/js/main.dfa2306a.js",
     "static/media/simpli-learn-javascript.png": "/jay-plus-plus/static/media/simpli-learn-javascript.6042723cda6f59c0664a.png",
     "static/media/codecademy-learn-swift.png": "/jay-plus-plus/static/media/codecademy-learn-swift.51d7e500089dbff2840d.png",
@@ -11,11 +11,11 @@
     "static/media/hacker-rank-java-basic.png": "/jay-plus-plus/static/media/hacker-rank-java-basic.49ba2d1935def5c786ce.png",
     "static/media/linkein-learning-search-engine-optimization-by-moz.jpeg": "/jay-plus-plus/static/media/linkein-learning-search-engine-optimization-by-moz.618c375554656b2c220c.jpeg",
     "index.html": "/jay-plus-plus/index.html",
-    "main.75d8caae.css.map": "/jay-plus-plus/static/css/main.75d8caae.css.map",
+    "main.40dbe57b.css.map": "/jay-plus-plus/static/css/main.40dbe57b.css.map",
     "main.dfa2306a.js.map": "/jay-plus-plus/static/js/main.dfa2306a.js.map"
   },
   "entrypoints": [
-    "static/css/main.75d8caae.css",
+    "static/css/main.40dbe57b.css",
     "static/js/main.dfa2306a.js"
   ]
 }

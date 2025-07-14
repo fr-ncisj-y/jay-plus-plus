@@ -58,7 +58,7 @@
     flex-direction: column;
     gap: 1.5rem;
     margin: 2rem 0;
-    width: 50vw; /* 👈 Wider layout */
+    width: 70vw; /* 👈 Wider layout */
     max-width: 700px;
     margin-inline: auto;
     backdrop-filter: blur(8px);

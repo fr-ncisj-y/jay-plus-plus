@@ -1,4 +1,3 @@
-// src/pages/home/Home.js
 import './Home.css';
 import Section from "../../components/Section";
 
